@@ -1,10 +1,10 @@
 FROM alpine
 
 LABEL "Maintener" 	= "Nelson Neoh" \
-	  "GitHub" 		= "https://github.com/shneoh/Docker.SSLTools" \
-	  "Contribute"	= "WebNIC" \
-	  "Description"	= "SSL Tools for dealing with certificates." \
-	  "version"		= "1.0"
+      "GitHub" 		= "https://github.com/shneoh/Docker.SSLTools" \
+      "Contribute"	= "WebNIC" \
+      "Description"	= "SSL Tools for dealing with certificates." \
+      "version"		= "1.0"
 
 RUN apk update && \
   apk add --no-cache openssl && \
