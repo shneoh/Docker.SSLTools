@@ -3,8 +3,7 @@ FROM alpine
 LABEL "Maintener" 	= "Nelson Neoh" \
       "GitHub" 		= "https://github.com/shneoh/Docker.SSLTools" \
       "Contribute"	= "WebNIC" \
-      "Description"	= "SSL Tools for dealing with certificates." \
-      "version"		= "1.0"
+      "Description"	= "SSL Tools for dealing with certificates."
 
 RUN apk update && \
   apk add --no-cache openssl && \
@@ -12,10 +11,15 @@ RUN apk update && \
   update-ca-certificates && \
   apk add --no-cache coreutils && \
   apk add --no-cache openjdk11-jdk && \
-  #apk add --no-cache bash && \
   rm -rf /var/cache/apk/*
 
-#COPY .bashrc /root 
 COPY sample_scripts /root/sample_scripts
 
+RUN chmod 755 /root/sample_scripts
+
+WORKDIR /root
+
+#Additional bash cli tool.
+#apk add --no-cache bash
+#COPY .bashrc /root 
 #RUN /bin/bash
