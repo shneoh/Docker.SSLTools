@@ -15,7 +15,7 @@ RUN apk update && \
   #apk add --no-cache bash && \
   rm -rf /var/cache/apk/*
 
-COPY .bashrc /root 
+#COPY .bashrc /root 
 COPY sample_scripts /root/sample_scripts
 
 #RUN /bin/bash
