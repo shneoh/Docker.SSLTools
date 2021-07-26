@@ -15,7 +15,7 @@ RUN apk update && \
 
 COPY sample_scripts /root/sample_scripts
 
-RUN chmod 755 /root/sample_scripts
+RUN chmod 766 /root/sample_scripts -R
 
 WORKDIR /root
 
