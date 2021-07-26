@@ -1,0 +1,1 @@
+openssl x509 -outform der -in domain_certificate.pem -out domain_certificate.der

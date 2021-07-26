@@ -1,0 +1,1 @@
+openssl req -out Domain_CSR.csr -new -newkey rsa:2048 -nodes -keyout privatekey.key

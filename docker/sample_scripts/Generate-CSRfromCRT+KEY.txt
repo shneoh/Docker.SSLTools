@@ -1,0 +1,1 @@
+openssl x509 -x509toreq -in domain_certificate.crt -out domain_CSR.csr -signkey privatekey.key
