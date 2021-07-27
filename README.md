@@ -24,6 +24,12 @@ WebNIC SSL 工具箱，一个可用于处理SSL证书的空间。
 > 让其常存于 Docker Desktop，去掉 --rm 即可
 
 ---
+## ToDo List ##
+Web service (Apache & Tomcat) with followings:
+[] script to create new vhosts
+[] script to deploy cert into vhosts
+[] start service to enable test of SSL cert through localhost:8080
 
+---
 Developed and Maintained by WebNIC-Nelson.
 Docker Hub repository: nelsonneoh/ssl_tools
