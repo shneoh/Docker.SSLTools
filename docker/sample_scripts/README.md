@@ -22,4 +22,8 @@
 >Display the MD5 hash for CSR/KEY/CRT to see if they are matched.
 - in command line enter the script to get usage hints.
 
----
+----
+### etc-keytools.txt
+>Example of keytools commands which is not yet convert into script.  For reference.
+
+
