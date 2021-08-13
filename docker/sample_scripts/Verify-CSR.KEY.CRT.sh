@@ -13,7 +13,7 @@ then
 fi
 
 
-if [[ -f "$1" ] && [ -f "$2" ] && [ -f "$3" ]]
+if [[ -f "$1" && -f "$2" && -f "$3" ]]
 then
     #To view the md5 hash of the modulus of the CSR:
     echo -n "CSR : " 
@@ -27,8 +27,21 @@ then
     echo -n "CRT : " 
     openssl x509 -noout -modulus -in "$3" | openssl md5
 else
-    echo
-    echo "<<ERROR>>"
-    echo "One or more file(s) not exists"
-    echo ""
+        echo
+        echo "<<ERROR>>"
+        echo "One or more file(s) not exists:"
+        if [[ -f "$1" ]]
+        then
+                echo $1
+        fi
+        if [[ -f "$2" ]]
+        then
+                echo $2
+        fi
+        if [[ -f "$3" ]]
+        then
+                echo $3
+        fi
+        echo
+        echo 
 fi
