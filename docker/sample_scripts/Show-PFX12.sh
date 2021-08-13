@@ -8,10 +8,10 @@ then
         exit
 fi
 
-if [[ -f $1 ]]
+if [[ -f "$1" ]]
 then
         #show all info in the PFX/P12 file
-        openssl pkcs12 -info -in $1
+        openssl pkcs12 -info -in "$1"
 else
         echo
         echo "<<ERROR>>"

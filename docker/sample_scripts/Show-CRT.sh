@@ -8,10 +8,10 @@ then
         exit
 fi
 
-if [[ -f $1 ]]
+if [[ -f "$1" ]]
 then
         #show domain certificate details
-        keytool -printcert -v -file $1
+        keytool -printcert -v -file "$1"
 else
         echo
         echo "<<ERROR>>"

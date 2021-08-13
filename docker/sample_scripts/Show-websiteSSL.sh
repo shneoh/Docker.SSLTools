@@ -10,4 +10,4 @@ then
 fi
 
 #show website certificate details
-openssl s_client -connect $1
+openssl s_client -connect "$1"

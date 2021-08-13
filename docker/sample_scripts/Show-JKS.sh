@@ -8,10 +8,10 @@ then
         exit
 fi
 
-if [[ -f $1 ]]
+if [[ -f "$1" ]]
 then
         #show all info in the keystore file
-        keytool -list -v -keystore $1
+        keytool -list -v -keystore "$1"
 else
         echo
         echo "<<ERROR>>"

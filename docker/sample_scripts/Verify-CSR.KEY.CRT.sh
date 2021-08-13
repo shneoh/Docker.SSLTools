@@ -13,14 +13,22 @@ then
 fi
 
 
-#To view the md5 hash of the modulus of the CSR:
-echo -n "CSR : " 
-openssl req -noout -modulus -in $1 | openssl md5
+if [[ -f "$1" ] && [ -f "$2" ] && [ -f "$3" ]]
+then
+    #To view the md5 hash of the modulus of the CSR:
+    echo -n "CSR : " 
+    openssl req -noout -modulus -in "$1" | openssl md5
 
-#To view the md5 hash of the modulus of the private key:
-echo -n "KEY : " 
-openssl rsa -noout -modulus -in $2 | openssl md5
+    #To view the md5 hash of the modulus of the private key:
+    echo -n "KEY : " 
+    openssl rsa -noout -modulus -in "$2" | openssl md5
 
-#To view the md5 hash of the modulus of the certificate:
-echo -n "CRT : " 
-openssl x509 -noout -modulus -in $3 | openssl md5
+    #To view the md5 hash of the modulus of the certificate:
+    echo -n "CRT : " 
+    openssl x509 -noout -modulus -in "$3" | openssl md5
+else
+    echo
+    echo "<<ERROR>>"
+    echo "One or more file(s) not exists"
+    echo ""
+fi
